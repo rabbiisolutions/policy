@@ -3,6 +3,7 @@ import texts from "../../constants/texts";
 import Icon from "../icon";
 import printIcon from "../../icons/printer.svg";
 import PolicySection from "../../constants/PolicySections";
+import Mobile from "./Mobile";
 
 const Main = () => {
   return (
@@ -22,7 +23,7 @@ const Main = () => {
 
         </section>
         <section id={'mobile'}>
-
+          <Mobile/>
         </section>
       </section>
   );

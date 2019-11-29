@@ -28,7 +28,7 @@ const personal = {
       'We also may obtain data from third parties. We protect data obtained from third parties' +
       ' according to the practices described in this statement, plus any additional restrictions' +
       ' imposed by the source of the data. These third-party sources vary over time and include:',
-      ListItem(['Publicly-available sources, such as open government databases.']),
+      ListItem([{text: 'Publicly-available sources, such as open government databases.', key: 'a'}]),
       'You have choices when it comes to the services you use and the data you share. When you' +
       ' are asked to provide personal data, you can decline. All our services require some' +
       ' personal data to operate and provide you with the service. If you choose not to provide ' +
@@ -39,16 +39,16 @@ const personal = {
       ' or cancel it. We will notify you if this is the case at the time. ',
       'The data we collect can include the following:',
       ListItem([
-          'Your biodata (Includes name, gender and I.D. number)',
-          'Your contact details (E-mail and phone number)',
-          'Residential area',
-          'Education background',
-          'Work experience'
+        {text: 'Your biodata (Includes name, gender and I.D. number)', key: 'a'},
+        {text: 'Your contact details (E-mail and phone number)', key: 'b'},
+        {text: 'Residential area', key: 'c'},
+        {text: 'Education background', key: 'd'},
+        {text: 'Work experience', key: 'e'}
       ])
   ]
 };
 
-const inforUser = {
+const inforUse = {
   title: subSections[1],
   text: [
       'As stated earlier the information collected is used to provide you and everyone we deal' +
@@ -119,7 +119,7 @@ const changes = {
 
 const PolicySection = {
   preamble: preamble, subSections: subSections, changes: changes, rights: rights,
-  inforProtection: inforProtection, thirdParty: thirdParty, inforUser: inforUser,
+  inforProtection: inforProtection, thirdParty: thirdParty, inforUse: inforUse,
   personal: personal
 };
 
