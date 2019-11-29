@@ -7,6 +7,7 @@ import SignUpModal from "./components/signUpModal";
 import MobileFooter from "./components/sections/footer";
 import backDropHandler from "./events/backDrop";
 import texts from "./constants/texts";
+import Main from "./components/sections/main";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <NavBar/>
         <DropDown/>
+        <Main/>
         <SideBar/>
         <SignUpModal className="sign-up modal hidden" signUpText={texts.signUp}/>
         <div className="page-mask hidden" onClick={e => backDropHandler(e)} />
