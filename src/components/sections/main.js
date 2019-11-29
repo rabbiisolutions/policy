@@ -9,26 +9,30 @@ import SideNav from "./SideNav";
 
 const Main = () => {
   return (
-      <section className={'header'}>
-        <h1 id={'heading'}>Rabbii TS Privacy Policy</h1>
-        <div id={'actionable'}>
-          <div id={'last-update'}>Last Updated:&nbsp;{texts.lastUpdate}</div>
-          <div id={'print-link'}><Icon src={printIcon} width={2.5} height={2.5}/>&nbsp;Print</div>
-        </div>
-        <div id={'preamble'}>
-          {PolicySection.preamble}
-        </div>
-        <div id={'lead'}>
-          (tap section to expand and view content)
-        </div>
-        <SideNav/>
+      <main>
+        <header>
+          <h1 id={'heading'}>Rabbii TS Privacy Policy</h1>
+          <div id={'actionable'}>
+            <div id={'last-update'}>Last Updated:&nbsp;{texts.lastUpdate}</div>
+            <div id={'print-link'}><Icon src={printIcon} width={2.5} height={2.5}/>
+              <span>Print</span>
+            </div>
+          </div>
+          <div id={'preamble'}>
+            {PolicySection.preamble}
+          </div>
+          <div id={'lead'}>
+            (tap section to expand and view content)
+          </div>
+        </header>
         <section id={'desktop'}>
+          <SideNav/>
           <Desktop/>
         </section>
         <section id={'mobile'}>
           <Mobile/>
         </section>
-      </section>
+      </main>
   );
 };
 

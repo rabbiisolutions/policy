@@ -12,8 +12,8 @@ const toggle = (panel) => {
 
 const changeIcon = (toggle) => {
   const hidden = 'hidden';
-  toggle.childNodes[1].classList.toggle(hidden); // down icon
-  toggle.childNodes[2].classList.toggle(hidden); // up icon
+  toggle.childNodes[0].classList.toggle(hidden); // down icon
+  toggle.childNodes[1].classList.toggle(hidden); // up icon
 };
 
 const sectionCollapseHandler = evt => {

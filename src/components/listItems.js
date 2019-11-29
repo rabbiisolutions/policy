@@ -2,7 +2,7 @@ import React from "react";
 
 const ListItem = (props) => {
   let listItems = props.map(props => (
-          <li key={props.key}>{props.text}</li>
+          <li key={props.key} className={props.className}>{props.text}</li>
       )
   );
 

@@ -11,9 +11,9 @@ const InfoUse = () => {
           <p>{PolicySection.inforUse.text[0]}</p>
           <div className={'sub-title'}>A. TeeCha</div>
           <ol type="I">
-            <li>Teachers</li>
+            <li className={'bold'}>Teachers</li>
             <p>{PolicySection.inforUse.text[1]}</p>
-            <li>Clients</li>
+            <li className={'bold'}>Clients</li>
             <p>{PolicySection.inforUse.text[2]}</p>
           </ol>
           <p>{PolicySection.inforUse.text[3]}</p>

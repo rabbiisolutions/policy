@@ -5,12 +5,12 @@ const preamble = 'Your privacy is important to us. This privacy statement explai
     'processes it, and for what purposes.';
 
 const  subSections = [
-  'Personal data we collect',
+  'Personal Data We Collect',
   'How We Use The Information you Fill',
   'Third Party Closure',
   'Information Protection',
   'Rights of Users',
-  'Rights of Users'
+  'Changes to our Privacy Policies'
 ];
 
 const personal = {
@@ -28,7 +28,7 @@ const personal = {
       'We also may obtain data from third parties. We protect data obtained from third parties' +
       ' according to the practices described in this statement, plus any additional restrictions' +
       ' imposed by the source of the data. These third-party sources vary over time and include:',
-      ListItem([{text: 'Publicly-available sources, such as open government databases.', key: 'a'}]),
+      ListItem([{text: 'Publicly-available sources, such as open government databases.', key: 'a', className: 'bold'}]),
       'You have choices when it comes to the services you use and the data you share. When you' +
       ' are asked to provide personal data, you can decline. All our services require some' +
       ' personal data to operate and provide you with the service. If you choose not to provide ' +
@@ -73,12 +73,17 @@ const thirdParty = {
   title: subSections[2],
   text: [
       'Does RABBII share your personal info?',
-      'Information about our teachers and clients is an important part of our business and we are not in any way in the business of selling our teacher’s and client’s personal information to others.\n' +
+      'Information about our teachers and clients is an important part of our business and we are' +
+      ' not in any way in the business of selling our teacher’s and client’s personal information ' +
+      'to others.\n' +
       'The only way that we can share your personal information is by your consent or when we' +
       ' are required by the law to produce the information.\n',
       'What of business transfers?',
       'As we continue to grow, we might sell or buy other businesses. In such transactions,' +
-      ' customer information generally is one of the transferred business assets but will remain subject to the promises made in any pre-existing privacy notice (unless the teacher or client or any other business partner consents otherwise). Also in the unlikely event that RABBII and all of its assets are acquired customer information will be one of the transferred assets.'
+      ' customer information generally is one of the transferred business assets but will remain ' +
+      'subject to the promises made in any pre-existing privacy notice (unless the teacher or' +
+      ' client or any other business partner consents otherwise). Also in the unlikely event that' +
+      ' RABBII and all of its assets are acquired customer information will be one of the transferred assets.'
   ]
 };
 
@@ -113,7 +118,7 @@ const changes = {
   text: [
       'We will keep our privacy policy under regular review and we shall place any updates on' +
       ' this webpage.',
-      'This Privacy Policy was last updated on 28/11/19.'
+      'This Privacy Policy was last updated on 29/11/19.'
   ]
 };
 

@@ -10,9 +10,9 @@ const UserRights = () => {
         <div className={'content'}>
           <p>{PolicySection.rights.text[0]}</p>
           <ol type="I">
-            <li>{PolicySection.rights.text[1]}</li>
+            <li className={'bold'}>{PolicySection.rights.text[1]}</li>
             <p>{PolicySection.rights.text[2]}</p>
-            <li>{PolicySection.rights.text[3]}</li>
+            <li className={'bold'}>{PolicySection.rights.text[3]}</li>
             <p>{PolicySection.rights.text[4]}</p>
           </ol>
           <p>{PolicySection.rights.text[5]}</p>

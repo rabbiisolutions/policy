@@ -16,7 +16,7 @@ const toggle = (title) => {
   return (
       <div className="section-toggle" onClick={e => sectionCollapseHandler(e)}>
         <Icon src={rightIcon} height={1.5} width={1.5} className="down"/>
-        <Icon src={downIcon} height={1.5} width={1.5} className="up hidden"/>
+        <Icon src={downIcon} height={1.2} width={1.2} className="up hidden"/>
         <span className="section-title">{title}</span>
       </div>);
 };
