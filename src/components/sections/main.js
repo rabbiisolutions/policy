@@ -14,7 +14,8 @@ const Main = () => {
           <h1 id={'heading'}>Rabbii TS Privacy Policy</h1>
           <div id={'actionable'}>
             <div id={'last-update'}>Last Updated:&nbsp;{texts.lastUpdate}</div>
-            <div id={'print-link'}><Icon src={printIcon} width={2.5} height={2.5}/>
+            <div id={'print-link'} onClick={event => window.print() }>
+              <Icon src={printIcon} width={2.5} height={2.5}/>
               <span>Print</span>
             </div>
           </div>

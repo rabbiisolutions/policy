@@ -41,6 +41,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
     width: 100%;
 
+    @media print {
+        color: black;
+    }
+
     .nav-bar {
         background-color: color(mirage);
         height: $navBarHeight;
@@ -53,6 +57,10 @@ body {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+
+        @media print {
+            display: none;
+        }
 
         .nav {
             display: none;
@@ -124,9 +132,16 @@ body {
                     text-align: left;
                     margin-bottom: 0;
                 }
+                @media print {
+                    color: color(mirage);
+                }
             }
 
             #actionable {
+                @media print {
+                    display: none;
+                }
+
                 @include desktop {
                     display: flex;
                     justify-content: space-between;
@@ -156,6 +171,9 @@ body {
                 @include desktop {
                     margin-bottom: 30px;
                 }
+                @media print {
+                    margin-bottom: 30px;
+                }
             }
 
             #lead {
@@ -169,15 +187,33 @@ body {
                 @include desktop {
                     display: none;
                 }
+
+                @media print {
+                    display: none;
+                }
             }
         }
 
         #desktop {
             display: none;
+
+            @media print {
+                display: block;
+            }
+
             @include desktop {
                 display: grid;
                 grid-template-columns: 280px auto;
                 column-gap: 30px;
+            }
+
+            #column {
+                max-height: 500px;
+                overflow-y: scroll;
+
+                @media print {
+                    max-height: none;
+                }
             }
 
             #side-bar {
@@ -189,6 +225,10 @@ body {
                     display: block;
                     text-decoration: none;
                     color: rgba(27, 37, 49, 0.72);
+                }
+
+                @media print {
+                    display: none;
                 }
             }
             .title {
@@ -210,10 +250,16 @@ body {
                 }
             }
         }
+
         #mobile {
             @include desktop {
                 display: none;
             }
+
+            @media print{
+                display: none;
+            }
+
         }
 
         .sub-title {
@@ -222,7 +268,7 @@ body {
 
         .sections-accordion {
             color: color(mirage);
-            padding: 5px 5px;
+            padding: 5px 0;
 
             .section-toggle {
                 display: flex;
@@ -251,7 +297,7 @@ body {
             }
 
             section {
-                padding: 5px;
+                padding: 0 5px;
                 display: none;
                 border: 1px solid rgba(27, 37, 49, 0.31);
                 border-radius: 5px;
@@ -305,11 +351,19 @@ body {
 
         .copyright {
             color: color(robinsEggBlue);
+
+            @media print {
+                color: color(mirage);
+            }
         }
 
         .company {
             color: color(aqua);
             font-size: .9em;
+
+            @media print {
+                color: color(mirage);
+            }
 
             @include desktop {
                 font-size: 1.1em;
