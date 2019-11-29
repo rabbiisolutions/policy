@@ -12,7 +12,7 @@ $webkitRadius : 10em;
 $borderRadius: 10em;
 $font24: 1em;
 $desktop: 800px;
-$monitor: 1000px;
+$monitor: 1100px;
 
 @function color($name) {
     @return map_get($colors, $name);
@@ -112,7 +112,7 @@ body {
     }
 
     main {
-        padding: $navBarHeight 15px 15px 15px;
+        padding: $navBarHeight 8% 8% 8%;
         display: flex;
         flex-direction: column;
 
@@ -120,11 +120,18 @@ body {
             #heading {
                 text-align: center;
                 color: color(blueChill);
+                @include desktop {
+                    text-align: left;
+                    margin-bottom: 0;
+                }
             }
 
             #actionable {
                 @include desktop {
                     display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
                 }
                 #last-update {
                     font-size: .9em;
@@ -145,6 +152,12 @@ body {
                 }
             }
 
+            #preamble {
+                @include desktop {
+                    margin-bottom: 30px;
+                }
+            }
+
             #lead {
                 display: block;
                 margin: 30px 0 20px;
@@ -162,13 +175,49 @@ body {
         #desktop {
             display: none;
             @include desktop {
-                display: block;
+                display: grid;
+                grid-template-columns: 280px auto;
+                column-gap: 30px;
+            }
+
+            #side-bar {
+                text-transform: capitalize;
+                margin-top: 20px;
+
+                .nav-elem {
+                    margin-bottom: 20px;
+                    display: block;
+                    text-decoration: none;
+                    color: rgba(27, 37, 49, 0.72);
+                }
+            }
+            .title {
+                font-weight: bold;
+                font-size: 1.125em;
+                border-bottom: 1px solid rgba(27, 37, 49, 0.31);
+                padding-bottom: 5px;
+            }
+            .scroll-up {
+                display: flex;
+                align-items: center;
+                color: color(blueChill);
+                text-transform: capitalize;
+                margin-bottom: 40px;
+                width: fit-content;
+
+                span {
+                    margin-right: 5px;
+                }
             }
         }
         #mobile {
             @include desktop {
                 display: none;
             }
+        }
+
+        .sub-title {
+            font-weight: bold;
         }
 
         .sections-accordion {
@@ -190,20 +239,23 @@ body {
 
                 .section-title {
                     margin-left: 5px;
+                    font-size: 1.125em;
                 }
             }
 
             .section-toggle.shown, .section-toggle:hover {
                 color: color(blueChill);
             }
-            .title {
+            .title, .scroll-up {
                 display: none;
             }
 
             section {
-                padding: 0 5px;
+                padding: 5px;
                 display: none;
                 border: 1px solid rgba(27, 37, 49, 0.31);
+                border-radius: 5px;
+                transition: max-height 0.2s ease-out;
             }
         }
     }

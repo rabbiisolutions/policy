@@ -27,7 +27,9 @@ const Main = () => {
         </header>
         <section id={'desktop'}>
           <SideNav/>
-          <Desktop/>
+          <div id={'column'}>
+            <Desktop/>
+          </div>
         </section>
         <section id={'mobile'}>
           <Mobile/>

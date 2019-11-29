@@ -1,5 +1,6 @@
 import PolicySection from "../../../constants/PolicySections";
 import React from "react";
+import ScrollUp from "../../ScrollUp";
 
 const InfoUse = () => {
   return (
@@ -18,6 +19,7 @@ const InfoUse = () => {
           </ol>
           <p>{PolicySection.inforUse.text[3]}</p>
         </div>
+        <ScrollUp/>
       </section>
   )
 };

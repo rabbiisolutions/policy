@@ -1,5 +1,6 @@
 import PolicySection from "../../../constants/PolicySections";
 import React from "react";
+import ScrollUp from "../../ScrollUp";
 
 const PersonalData = () => {
   return (
@@ -15,6 +16,7 @@ const PersonalData = () => {
           <p>{PolicySection.personal.text[4]}</p>
           {PolicySection.personal.text[5]}
         </div>
+        <ScrollUp/>
       </section>
   )
 };

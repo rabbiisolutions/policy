@@ -4,12 +4,12 @@ import PolicySection from "../../constants/PolicySections";
 const SideNav = () => {
   return (
     <nav id={'side-bar'}>
-      <div className={'nav-elem'}>{PolicySection.subSections[0]}</div>
-      <div className={'nav-elem'}>{PolicySection.subSections[1]}</div>
-      <div className={'nav-elem'}>{PolicySection.subSections[2]}</div>
-      <div className={'nav-elem'}>{PolicySection.subSections[3]}</div>
-      <div className={'nav-elem'}>{PolicySection.subSections[4]}</div>
-      <div className={'nav-elem'}>{PolicySection.subSections[5]}</div>
+      <a className={'nav-elem'} href={'#personal-data'}>{PolicySection.subSections[0]}</a>
+      <a className={'nav-elem'} href={'#info-use'}>{PolicySection.subSections[1]}</a>
+      <a className={'nav-elem'} href={'#third-party'}>{PolicySection.subSections[2]}</a>
+      <a className={'nav-elem'} href={'#info-protection'}>{PolicySection.subSections[3]}</a>
+      <a className={'nav-elem'} href={'#user-rights'}>{PolicySection.subSections[4]}</a>
+      <a className={'nav-elem'} href={'#changes'}>{PolicySection.subSections[5]}</a>
     </nav>
   );
 };
