@@ -4,6 +4,7 @@ import Icon from "../icon";
 import printIcon from "../../icons/printer.svg";
 import PolicySection from "../../constants/PolicySections";
 import Mobile from "./Mobile";
+import Desktop from "./Desktop";
 
 const Main = () => {
   return (
@@ -20,7 +21,7 @@ const Main = () => {
           (tap section to expand and view content)
         </div>
         <section id={'desktop'}>
-
+          <Desktop/>
         </section>
         <section id={'mobile'}>
           <Mobile/>

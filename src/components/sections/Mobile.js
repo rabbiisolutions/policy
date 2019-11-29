@@ -10,7 +10,7 @@ import PersonalData from "./policy/PersonalData";
 
 const name = 'sections-accordion';
 
-const Sections = () => {
+const Mobile = () => {
   const collapses = [];
   collapses.push(
       <div className={name} key={'a'}>
@@ -48,7 +48,7 @@ const Sections = () => {
         }
       </div>
       ,
-      <div className={name} key={16}>
+      <div className={name} key={'f'}>
         {mobileAccordion.toggle(PolicySection.subSections[5])}
         {
           Changes()
@@ -59,13 +59,6 @@ const Sections = () => {
   return ( // return the sections list
       collapses.map((panel) => (panel))
   );
-};
-
-
-const Mobile = () => {
-  return (
-      Sections()
-  )
 };
 
 export default Mobile;
