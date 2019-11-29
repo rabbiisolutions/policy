@@ -4,7 +4,7 @@ import Icon from "../icon";
 import toggle from "../../icons/list.svg"
 import Button from "../button";
 import texts from "../../constants/texts";
-import signUpHandler from "../../events/signUpModal";
+import signUpHandler from "../../events/SignUp";
 import menuToggle from "../../events/menuToggle";
 import overlayAction from "../../events/overlayActions";
 

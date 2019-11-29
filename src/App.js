@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from "./components/sections/navBar";
 import DropDown from "./components/DropDown";
 import SideBar from "./components/sections/sideBar";
-import SignUpModal from "./components/signUpModal";
+import SignUpModal from "./components/SignUpModal";
 import MobileFooter from "./components/sections/footer";
 import backDropHandler from "./events/backDrop";
 import texts from "./constants/texts";

@@ -1,11 +1,13 @@
-import texts from "../constants/texts";
+const hidden = 'hidden';
 
 const backDropHandler = e => {
-  let modal = document.getElementsByClassName('sign-up modal')[0];
+  let modal = document.getElementsByClassName('sign-up-modal')[0];
   const sideBar = document.getElementsByClassName('menu')[0];
-  modal.classList.add(texts.hidden);
-  sideBar.classList.add(texts.hidden);
-  e.target.classList.toggle(texts.hidden);
+  const services = document.getElementsByClassName('our-services')[0];
+  modal.classList.add(hidden);
+  sideBar.classList.add(hidden);
+  services.classList.add(hidden);
+  e.target.classList.toggle(hidden);
 };
 
 export default backDropHandler;
