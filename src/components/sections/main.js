@@ -5,6 +5,7 @@ import printIcon from "../../icons/printer.svg";
 import PolicySection from "../../constants/PolicySections";
 import Mobile from "./Mobile";
 import Desktop from "./Desktop";
+import SideNav from "./SideNav";
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
         <div id={'lead'}>
           (tap section to expand and view content)
         </div>
+        <SideNav/>
         <section id={'desktop'}>
           <Desktop/>
         </section>
