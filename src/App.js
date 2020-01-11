@@ -4,7 +4,7 @@ import NavBar from "./components/sections/NavBar.jsx";
 import DropDown from "./components/DropDown";
 import SideBar from "./components/sections/sideBar";
 import SignUpModal from "./components/SignUpModal";
-import MobileFooter from "./components/sections/footer";
+import MobileFooter from "./components/sections/Footer.jsx";
 import backDropHandler from "./events/backDrop";
 import texts from "./constants/texts";
 import Main from "./components/sections/main";

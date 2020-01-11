@@ -386,41 +386,57 @@ body {
     }
 
     footer {
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: .9em;
-        padding: 20px 5px;
-        background: #FAFAFA;
-        width: inherit;
+        #darken {
+            background: #FAFAFA;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 6vw 2vw;
 
-        @include desktop {
-            font-size: 1.1em;
-            margin-top: 0;
-        }
-
-        .copyright {
-            color: color(mirage);
-
-            @media print {
+            a {
+                font-size: 4.5vw;
+                font-weight: 600;
+                text-decoration: none;
                 color: color(mirage);
             }
-        }
 
-        .company {
-            color: color(aqua);
-            font-size: .9em;
+            a:hover {
+                text-decoration: underline;
+                color: color(curiosBlue);
+            }
 
-            @media print {
+
+            .copyright {
+                font-weight: 300;
+                margin-top: 4vw;
+                font-size: 3.5vw;
                 color: color(mirage);
+                display: inline-block;
+
+                @media print {
+                    color: color(mirage);
+                }
+
+                @include desktop {
+                    font-size: 1.125rem;
+                    margin-top: inherit;
+                    margin-bottom: inherit;
+                }
             }
 
             @include desktop {
-                font-size: 1.1em;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                padding: 1vw;
+
+                a {
+                    font-size: 1.125rem;
+                    margin-right: 25px;
+                }
             }
         }
-
     }
 
     .side-bar {
