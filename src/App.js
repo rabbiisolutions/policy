@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import NavBar from "./components/sections/navBar";
+import NavBar from "./components/sections/NavBar.jsx";
 import DropDown from "./components/DropDown";
 import SideBar from "./components/sections/sideBar";
 import SignUpModal from "./components/SignUpModal";

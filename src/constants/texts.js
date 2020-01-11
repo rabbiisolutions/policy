@@ -1,6 +1,6 @@
 const signUp = 'Sign Up';
 const menuTitle = 'Menu';
-const menuItems = ['Home', 'Our Services', 'About Us', 'FAQs', 'Contact Us', 'Trending'];
+const menuItems = ['Home', 'Our Services', 'Tuition Jobs', 'About Us', 'Trending', 'FAQs'];
 const ourServices = ['TeeCha'];
 const hidden = 'hidden';
 const dot = '⦁ ';

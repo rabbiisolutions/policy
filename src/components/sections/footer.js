@@ -4,8 +4,10 @@ import React from "react";
 const MobileFooter = () => {
   return (
       <footer>
-          <span className="copyright">&copy;&nbsp;{new Date().getFullYear()}&nbsp;Copyright:&nbsp;</span>
-          <h1 className="company">&nbsp;Rabbii&nbsp;Technology&nbsp;Solutions&nbsp;®&nbsp;</h1>
+        <div id="darken">
+          <a href={'#heading'}>Privacy Policy</a>
+          <h1 className="copyright">&copy;&nbsp;Rabbii&nbsp;Technology&nbsp;Solutions&nbsp;{new Date().getFullYear()}</h1>
+        </div>
       </footer>
   );
 };
