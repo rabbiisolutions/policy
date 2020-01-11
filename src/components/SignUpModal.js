@@ -3,24 +3,30 @@ import ButtonLink from "./ButtonLink";
 import signUpHandler from "../events/SignUp";
 import texts from "../constants/texts";
 
-const SignUpModal = (props) => {
+const SignUpModal = () => {
   return (
-      <div className="sign-up-modal hidden">
-        <div className="close-icon" onClick={e => signUpHandler(e)}>&#10006;</div>
-        <header>
-          <div className="sign-up-text">{texts.signUpLong}</div>
-        </header>
-        <div className="user-title">Clients/Parents</div>
-        <div id="client-btns">
-          <ButtonLink link="https://forms.gle/y7KTkMDtYCtAywDu6" className="clients-btn" value="Get a Tutor"/>
-        </div>
-        <div className="user-title">Tutors</div>
-        <div id="tutor-btns">
-          <ButtonLink link="https://forms.gle/LerPUYib9EJ3yMxr7" className="tutors-btn" value="Non TSC Tutor"/>
-          <ButtonLink link="https://forms.gle/ZU8GZrYVPWenL4r19" className="tutors-btn" value="TSC Tutor"/>
-          <ButtonLink link="https://forms.gle/CmgUyZCWrnLgsqnC9" className="tutors-btn" value="Skills Tutor"/>
-        </div>
-        <div className="msg">If you face difficulty in registering call, text or WhatsApp on 0772 915 361</div>
+      <div className={"sign-up-modal hidden"}>
+        <div className={"close-icon"} onClick={e => signUpHandler(e)}>&#10006;</div>
+        <div id="sign-up-text">{texts.signUp}</div>
+        <section>
+          <div className="user-title">
+            Sign up as a Client/Parent to get a tutor/Teacher
+          </div>
+          <div id="client-btns">
+            <ButtonLink link="https://forms.gle/y7KTkMDtYCtAywDu6" className="client-btn" value="Get a Tutor"/>
+          </div>
+        </section>
+        <section>
+          <div className="user-title">
+            Register to be a Tutor/Teacher in your specific category
+          </div>
+          <div id="tutor-btns">
+            <ButtonLink link="https://forms.gle/LerPUYib9EJ3yMxr7" className="tutor-btn" value="Non TSC Tutor"/>
+            <ButtonLink link="https://forms.gle/ZU8GZrYVPWenL4r19" className="tutor-btn" value="TSC Tutor"/>
+            <ButtonLink link="https://forms.gle/CmgUyZCWrnLgsqnC9" className="tutor-btn" value="Skills Tutor"/>
+          </div>
+        </section>
+        <div className="info">If you face difficulty in registering call, text or WhatsApp on 0772 915 361</div>
       </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from "./components/sections/NavBar.jsx";
 import DropDown from "./components/DropDown";
-import SideBar from "./components/sections/sideBar";
+import SideBar from "./components/sections/SideBar.jsx";
 import SignUpModal from "./components/SignUpModal";
 import MobileFooter from "./components/sections/Footer.jsx";
 import backDropHandler from "./events/backDrop";

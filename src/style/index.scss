@@ -357,34 +357,6 @@ body {
         }
     }
 
-    .our-services {
-        position: fixed;
-        z-index: 105;
-        top: 4.5em;
-        left: 36%;
-        padding: 10px 5px;
-        width: fit-content;
-        min-width: 100px;
-        height: auto;
-        border-radius: 5px;
-        background-color: #f7f7f7;
-        border: 1px solid;
-
-        .nav-sub-item {
-            display: block;
-            padding: 5px 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 1px solid;
-            color: color(azure);
-        }
-
-        .nav-sub-item:hover {
-            color: color(white);
-            background-color: color(bondiBlue);
-        }
-    }
-
     footer {
         #darken {
             background: #FAFAFA;
@@ -399,13 +371,16 @@ body {
                 font-weight: 600;
                 text-decoration: none;
                 color: color(mirage);
+
+                @media print {
+                    display: none;
+                }
             }
 
             a:hover {
                 text-decoration: underline;
-                color: color(curiosBlue);
+                color: #27A1DA;
             }
-
 
             .copyright {
                 font-weight: 300;
@@ -416,6 +391,8 @@ body {
 
                 @media print {
                     color: color(mirage);
+                    font-size: .9em;
+                    margin-top: 0;
                 }
 
                 @include desktop {
@@ -440,7 +417,7 @@ body {
     }
 
     .side-bar {
-        background-color: color(bluewood);
+        background-color: #FAFAFA;
         width: 63%;
         display: flex;
         flex-direction: column;
@@ -450,17 +427,15 @@ body {
         position: fixed;
         height: 100%;
         padding: 10px 0;
-        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-        @include desktop {
-            display: none;
-        }
 
         .menu-title {
-            color: #A8A8A8;
-            font-size: 1.1em;
+            color: rgba(27, 37, 49, 0.64);
+            font-size: 3vw;
             text-align: center;
             display: block;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(27, 37, 49, 0.25);
+            font-weight: 300;
         }
 
         a.menu-item, .menu-sub-item {
@@ -468,27 +443,33 @@ body {
             text-decoration: none;
         }
 
-        .menu-sub-item {
-            color: #C0FFFF;
-            font-size: 1em;
-            padding: 15px 25px;
-        }
-
-        .menu-divider {
-            height: 2px;
-            color: #9A969B;
-            margin: 10px 30px;
-        }
-
         .menu-item {
-            color: color(aqua);
-            padding: 20px 15px;
+            color: color(mirage);
             width: 100%;
-            cursor: $pointer;
+            cursor: pointer;
+            font-weight: 300;
+            font-size: 3vw;
+
+            .text {
+                padding: 20px 15px;
+                display: inline-block;
+            }
+
+            .activated {
+                height: 100%;
+            }
         }
 
         .menu-item.active, .menu-sub-item.active, .menu-item:hover, .menu-sub-item:hover {
-            background-color: color(mirage);
+            font-weight: bold;
+            color: color(deepSeaGreen);
+            font-size: 3.5vw;
+            text-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+            background-color: color(gallery);
+
+            .activated {
+                background-color: color(mirage);
+            }
         }
     }
 
@@ -503,7 +484,7 @@ body {
     }
 
     .sign-up-modal {
-        background-color: color(bluewood);
+        background-color: white;
         z-index: 1000;
         width: 90%;
         position: fixed;
@@ -511,89 +492,69 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         max-height: calc(100% - 100px);
-        padding: 20px 0;
+        padding: 2vw 2vw 3vw;
         border-radius: 5px;
 
         @include desktop {
-            max-width: 593px;
+            width: 60%;
+        }
+
+        #tutor-btns {
+            justify-content: center;
         }
 
         .close-icon {
             right: 10px;
             top: 5px;
             position: absolute;
-            color: white;
-            cursor: $pointer;
+            cursor: pointer;
+            color: rgba(27, 37, 49, 0.64);
         }
 
-        header {
-            display: flex;
-            justify-content: center;
-        }
-
-        .sign-up-text {
-            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-            color: color(aqua);
-            font-size: 1em;
+        #sign-up-text {
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid color(dullMirage);
-            width: 90%;
-
-            @include desktop {
-                font-size: 1.25em;
-            }
+            font-weight: bold;
+            margin: 1vw 0;
+            font-size: 1.25rem;
         }
 
         .user-title {
-            font-size: 1.125em;
-            color: color(robinsEggBlue);
-            margin: 20px 0 20px 20px;
-            font-weight: bold;
+            font-size: .9em;
+            margin: 2vw 0;
+            text-transform: lowercase;
+            font-weight: 300;
+            text-align: center;
 
             @include desktop {
-                margin: 20px 0 20px 50px;
+                font-size: 1em;
+                margin: 1vw 0;
             }
         }
 
-        .clients-btn, .tutors-btn {
-            padding: .5em 1.5em;
-            display: inline-block;
-            box-shadow: 15px 25px 25px rgba(0, 0, 0, 0.25);
-            margin: 0 10px 15px 10px;
-            border: 0.2em solid;
+        section {
+            background-color: #FAFAFA;
+            border-radius: 5px;
+            padding: 1px 1px 5px 1px;
+            margin: 0 2vw 3vw;
+            @include desktop {
+                margin: 0 2vw 2vw;
+                padding: 1px;
+            }
         }
 
-
-        .tutors-btn, .clients-btn {
-            background-color: color(mirage);
-            color: color(aqua);
-            border-color: color(aqua);
-            font-weight: bold;
+        #client-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        #client-btns, #tutor-btns {
+        #tutor-btns {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
             flex-wrap: wrap;
         }
-
-        .msg {
-            margin-top: 20px;
-            color: color(robinsEggBlue);
-            font-size: .8em;
-            text-align: center;
-        }
-    }
-
-    .btn-link {
-        -webkit-border-radius: $webkitRadius;
-        border-radius: $borderRadius;
-        cursor: $pointer;
-        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-        text-decoration: none;
     }
 }
 
@@ -603,4 +564,40 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+.info {
+    font-weight: 300;
+    font-size: .8em;
+    text-align: center;
+}
+
+
+.btn-link {
+    -webkit-border-radius: $webkitRadius;
+    border-radius: $borderRadius;
+    cursor: $pointer;
+    text-decoration: none;
+    font-size: 1.25vw;
+    display: inline-block;
+    border-color: #27A1DA;
+    border-style: solid;
+    text-align: center;
+    background-color: color(white);
+    color: #27A1DA;
+}
+
+.client-btn, .tutor-btn {
+    padding: .45rem 1.2rem;
+    margin: .5vw 2vw 1.25vw;
+    border-width: 1px;
+    font-size: .9em;
+}
+
+.client-btn:hover, .tutor-btn:hover {
+    border-width: 2px;
+}
+
+.btn-link:hover {
+    transform: scale(1.1);
 }
