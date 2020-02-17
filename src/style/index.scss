@@ -3,7 +3,8 @@ $colors: (
         pampas: #EFEAE4, biscary: #203F6C, denim: #147CAC,
         magenta: #DC00FE, vividViolet: #9F34AF, heliotrope: #DF31FA, silverChalice: #ACACAC, scorpion: #625E5D,
         robinsEggBlue: #01d3d3, bluewood: #263246, deepSeaGreen: #094967,
-        timberwolf: #D4D1CC
+        timberwolf: #D4D1CC, alabaster: #FAFAFA, curiosBlue: #27A1DA,
+
 );
 
 $pointer: pointer;
@@ -45,8 +46,9 @@ body {
         color: black;
     }
 
+
     #nav-bar {
-        background-color: #FAFAFA;
+        background-color: color(alabaster);
         height: $navBarHeight;
         width: 100%;
         position: fixed;
@@ -57,9 +59,50 @@ body {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        z-index: 50;
+        box-shadow: 0 2px 4px rgba(27, 37, 49, 0.25);
+        @include desktop {
+            align-items: unset;
+        }
 
-        @media print {
-            display: none;
+        .logo {
+            display: inline-block; // can't apply max width without inline-block or block
+            max-width: 90px; // propagate to all logos (avoids large width on IE)
+            cursor: $pointer;
+            margin: 5px 0;
+        }
+        .logo span svg:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            -webkit-border-radius: $webkitRadius;
+            border-radius: $borderRadius;
+            background-color: color(white);
+            color: color(curiosBlue);
+            border-width: 1px;
+            border-style: solid;
+            border-color: color(curiosBlue);
+            @include desktop {
+                border-width: 2px;
+                font-weight: 600;
+                padding: .5em 1.5em;
+            }
+            padding: .4em 1.5em;
+            cursor: $pointer;
+            font-size: $font16;
+            margin: 8px 0;
+        }
+
+        button:hover {
+            background-color: color(curiosBlue);
+            color: color(white);
+            transition: all .5s ease-in-out;
+        }
+
+        .toggle span{
+            fill: color(mirage);
+            cursor: $pointer;
         }
 
         .nav {
@@ -81,23 +124,16 @@ body {
                 }
 
                 .active {
-                    background-color: #FAFAFA;
+                    background-color: color(curiosBlue);
                     height: 5px;
                     margin-top: 9px;
-                }
-
-                .current {
-                    background-color: color(mirage);
                 }
             }
 
             .nav-item:hover {
                 font-weight: bold;
-                color: #0B4B68;
+                color: color(deepSeaGreen);
                 text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-                .active {
-                    background-color: color(mirage);
-                }
             }
         }
 
@@ -108,12 +144,25 @@ body {
             }
 
             .nav-item.active {
-                color: #0B4B68;
+                color: color(deepSeaGreen);
                 font-weight: bold;
+            }
+            .nav-item.active:hover {
+                text-shadow: none;
             }
         }
 
         .toggle {
+            @include desktop {
+                display: none;
+            }
+        }
+
+        .toggle {
+            display: flex;
+            justify-content: flex-end;
+            width: 50px;
+            padding: 0 3vw;
             @include desktop {
                 display: none;
             }
@@ -124,49 +173,6 @@ body {
         }
         .toggle span svg:hover {
             transform: scale(1.1);
-        }
-
-        .logo {
-            display: inline-block; // can't apply max width without inline-block or block
-            max-width: 90px; // propagate to all logos (avoids large width on IE)
-            cursor: $pointer;
-            margin: 5px 0;
-        }
-        .logo span svg:hover {
-            transform: scale(1.1);
-        }
-        button {
-            -webkit-border-radius: $webkitRadius;
-            border-radius: $borderRadius;
-            background-color: #f9f9f9;
-            color: #A600C0;
-            border-width: 1px;
-            border-style: solid;
-            border-color: #A600C0;
-            @include desktop {
-                border-width: 2px;
-                font-weight: 600;
-            }
-            padding: .5em 1.5em;
-            cursor: $pointer;
-            font-size: $font16;
-            margin: 8px 0;
-        }
-
-        button:hover {
-            background-color: color(white);
-            transform: scale(1.1);
-        }
-
-        .toggle span{
-            fill: color(mirage);
-            cursor: $pointer;
-        }
-
-        .toggle {
-            @include desktop {
-                display: none;
-            }
         }
     }
 
@@ -468,7 +474,7 @@ body {
             background-color: color(gallery);
 
             .activated {
-                background-color: color(mirage);
+                background-color: color(curiosBlue);
             }
         }
     }
