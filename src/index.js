@@ -3,6 +3,10 @@ import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
+import './style/footer.css';
+import './style/side-bar.css';
+import './style/nav-bar.css';
+import './style/signup-modal.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

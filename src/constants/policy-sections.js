@@ -1,4 +1,4 @@
-import ListItem from "../components/listItems";
+import ListItem from "../components/basic/listItems";
 
 const preamble = 'Your privacy is important to us. This privacy statement explains the personal data' +
     ' Rabbii Technology Solutions Limited processes, how Rabbii Technology Solutions Limited processes' +
@@ -117,10 +117,10 @@ const changes = {
   ]
 };
 
-const PolicySection = {
+const policySection = {
   preamble: preamble, subSections: subSections, changes: changes, rights: rights,
   inforProtection: inforProtection, thirdParty: thirdParty, inforUse: inforUse,
   personal: personal
 };
 
-export default PolicySection;
+export default policySection;

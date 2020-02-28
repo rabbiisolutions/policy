@@ -1,6 +1,6 @@
 import React from "react";
-import Icon from "./icon";
-import up from "../icons/ant-design_arrow-up-outlineup-arrow.svg"
+import Icon from "./Icon";
+import up from "../../assets/icons/ant-design_arrow-up-outlineup-arrow.svg"
 
 const ScrollUp = () => {
   return (

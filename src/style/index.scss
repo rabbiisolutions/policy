@@ -46,136 +46,6 @@ body {
         color: black;
     }
 
-
-    #nav-bar {
-        background-color: color(alabaster);
-        height: $navBarHeight;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        z-index: 50;
-        box-shadow: 0 2px 4px rgba(27, 37, 49, 0.25);
-        @include desktop {
-            align-items: unset;
-        }
-
-        .logo {
-            display: inline-block; // can't apply max width without inline-block or block
-            max-width: 90px; // propagate to all logos (avoids large width on IE)
-            cursor: $pointer;
-            margin: 5px 0;
-        }
-        .logo span svg:hover {
-            transform: scale(1.1);
-        }
-
-        button {
-            -webkit-border-radius: $webkitRadius;
-            border-radius: $borderRadius;
-            background-color: color(white);
-            color: color(curiosBlue);
-            border-width: 1px;
-            border-style: solid;
-            border-color: color(curiosBlue);
-            @include desktop {
-                border-width: 2px;
-                font-weight: 600;
-                padding: .5em 1.5em;
-            }
-            padding: .4em 1.5em;
-            cursor: $pointer;
-            font-size: $font16;
-            margin: 8px 0;
-        }
-
-        button:hover {
-            background-color: color(curiosBlue);
-            color: color(white);
-            transition: all .5s ease-in-out;
-        }
-
-        .toggle span{
-            fill: color(mirage);
-            cursor: $pointer;
-        }
-
-        .nav {
-            display: none;
-            font-weight: 300;
-
-            .nav-item {
-                display: flex;
-                flex-direction: column;
-                padding: 15px 0 0;
-                min-width: fit-content;
-                cursor: $pointer;
-                text-decoration: none;
-                color: color(mirage);
-                margin: 0 .4375vw;
-                height: available;
-                .text {
-                    margin: 5px .625vw 0;
-                }
-
-                .active {
-                    background-color: color(curiosBlue);
-                    height: 5px;
-                    margin-top: 9px;
-                }
-            }
-
-            .nav-item:hover {
-                font-weight: bold;
-                color: color(deepSeaGreen);
-                text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-            }
-        }
-
-        @include desktop {
-            .nav {
-                display: flex;
-                justify-content: space-evenly;
-            }
-
-            .nav-item.active {
-                color: color(deepSeaGreen);
-                font-weight: bold;
-            }
-            .nav-item.active:hover {
-                text-shadow: none;
-            }
-        }
-
-        .toggle {
-            @include desktop {
-                display: none;
-            }
-        }
-
-        .toggle {
-            display: flex;
-            justify-content: flex-end;
-            width: 50px;
-            padding: 0 3vw;
-            @include desktop {
-                display: none;
-            }
-        }
-
-        .toggle span svg{
-            cursor: $pointer;
-        }
-        .toggle span svg:hover {
-            transform: scale(1.1);
-        }
-    }
-
     main {
         padding: $navBarHeight 8% 8% 8%;
         display: flex;
@@ -270,6 +140,7 @@ body {
 
                 @media print {
                     max-height: none;
+                    overflow-y: hidden;
                 }
             }
 
@@ -363,122 +234,6 @@ body {
         }
     }
 
-    footer {
-        #darken {
-            background: #FAFAFA;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 6vw 2vw;
-
-            a {
-                font-size: 4.5vw;
-                font-weight: 600;
-                text-decoration: none;
-                color: color(mirage);
-
-                @media print {
-                    display: none;
-                }
-            }
-
-            a:hover {
-                text-decoration: underline;
-                color: #27A1DA;
-            }
-
-            .copyright {
-                font-weight: 300;
-                margin-top: 4vw;
-                font-size: 3.5vw;
-                color: color(mirage);
-                display: inline-block;
-
-                @media print {
-                    color: color(mirage);
-                    font-size: .9em;
-                    margin-top: 0;
-                }
-
-                @include desktop {
-                    font-size: 1.125rem;
-                    margin-top: inherit;
-                    margin-bottom: inherit;
-                }
-            }
-
-            @include desktop {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                padding: 1vw;
-
-                a {
-                    font-size: 1.125rem;
-                    margin-right: 25px;
-                }
-            }
-        }
-    }
-
-    .side-bar {
-        background-color: #FAFAFA;
-        width: 63%;
-        display: flex;
-        flex-direction: column;
-        z-index: 100;
-        top: $navBarHeight;
-        right: 0;
-        position: fixed;
-        height: 100%;
-        padding: 10px 0;
-
-        .menu-title {
-            color: rgba(27, 37, 49, 0.64);
-            font-size: 3vw;
-            text-align: center;
-            display: block;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(27, 37, 49, 0.25);
-            font-weight: 300;
-        }
-
-        a.menu-item, .menu-sub-item {
-            display: block;
-            text-decoration: none;
-        }
-
-        .menu-item {
-            color: color(mirage);
-            width: 100%;
-            cursor: pointer;
-            font-weight: 300;
-            font-size: 3vw;
-
-            .text {
-                padding: 20px 15px;
-                display: inline-block;
-            }
-
-            .activated {
-                height: 100%;
-            }
-        }
-
-        .menu-item.active, .menu-sub-item.active, .menu-item:hover, .menu-sub-item:hover {
-            font-weight: bold;
-            color: color(deepSeaGreen);
-            font-size: 3.5vw;
-            text-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
-            background-color: color(gallery);
-
-            .activated {
-                background-color: color(curiosBlue);
-            }
-        }
-    }
-
     .page-mask {
         background: rgba(0, 0, 0, 0.2);
         position: fixed;
@@ -488,88 +243,14 @@ body {
         left: 0;
         z-index: 50;
     }
-
-    .sign-up-modal {
-        background-color: white;
-        z-index: 1000;
-        width: 90%;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-height: calc(100% - 100px);
-        padding: 2vw 2vw 3vw;
-        border-radius: 5px;
-
-        @include desktop {
-            width: 60%;
-        }
-
-        #tutor-btns {
-            justify-content: center;
-        }
-
-        .close-icon {
-            right: 10px;
-            top: 5px;
-            position: absolute;
-            cursor: pointer;
-            color: rgba(27, 37, 49, 0.64);
-        }
-
-        #sign-up-text {
-            text-align: center;
-            font-weight: bold;
-            margin: 1vw 0;
-            font-size: 1.25rem;
-        }
-
-        .user-title {
-            font-size: .9em;
-            margin: 2vw 0;
-            text-transform: lowercase;
-            font-weight: 300;
-            text-align: center;
-
-            @include desktop {
-                font-size: 1em;
-                margin: 1vw 0;
-            }
-        }
-
-        section {
-            background-color: #FAFAFA;
-            border-radius: 5px;
-            padding: 1px 1px 5px 1px;
-            margin: 0 2vw 3vw;
-            @include desktop {
-                margin: 0 2vw 2vw;
-                padding: 1px;
-            }
-        }
-
-        #client-btns {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #tutor-btns {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-    }
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .info {
@@ -598,12 +279,4 @@ body {
     margin: .5vw 2vw 1.25vw;
     border-width: 1px;
     font-size: .9em;
-}
-
-.client-btn:hover, .tutor-btn:hover {
-    border-width: 2px;
-}
-
-.btn-link:hover {
-    transform: scale(1.1);
 }

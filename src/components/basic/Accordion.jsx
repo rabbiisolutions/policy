@@ -1,8 +1,8 @@
 import React from "react";
-import sectionCollapseHandler from "../events/collapse";
-import Icon from "./icon";
-import rightIcon from "../icons/ant-design_caret-right-outlineright.svg";
-import downIcon from "../icons/drop-down-arrow.svg";
+import sectionCollapseHandler from "../../events/collapse";
+import Icon from "./Icon";
+import rightIcon from "../../assets/icons/ant-design_caret-right-outlineright.svg";
+import downIcon from "../../assets/icons/drop-down-arrow.svg";
 
 const panel = (data) => {
   return (

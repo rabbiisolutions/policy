@@ -1,11 +1,23 @@
 import React from "react";
-import texts from "../../constants/texts";
-import Icon from "../icon";
-import printIcon from "../../icons/printer.svg";
-import PolicySection from "../../constants/PolicySections";
+import texts from "../constants/texts";
+import Icon from "./basic/Icon";
+import printIcon from "../assets/icons/printer.svg";
+import policySection from "../constants/policy-sections";
 import Mobile from "./Mobile";
 import Desktop from "./Desktop";
-import SideNav from "./SideNav";
+
+const SideNav = () => {
+  return (
+      <nav id={'side-bar'}>
+        <a className={'nav-elem'} href={'#personal-data'}>{policySection.subSections[0]}</a>
+        <a className={'nav-elem'} href={'#info-use'}>{policySection.subSections[1]}</a>
+        <a className={'nav-elem'} href={'#third-party'}>{policySection.subSections[2]}</a>
+        <a className={'nav-elem'} href={'#info-protection'}>{policySection.subSections[3]}</a>
+        <a className={'nav-elem'} href={'#user-rights'}>{policySection.subSections[4]}</a>
+        <a className={'nav-elem'} href={'#changes'}>{policySection.subSections[5]}</a>
+      </nav>
+  );
+};
 
 const Main = () => {
   return (
@@ -20,7 +32,7 @@ const Main = () => {
             </div>
           </div>
           <div id={'preamble'}>
-            {PolicySection.preamble}
+            {policySection.preamble}
           </div>
           <div id={'lead'}>
             (tap section to expand and view content)
