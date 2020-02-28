@@ -119,14 +119,14 @@ $desktop: 800px;
         justify-content: center;
         width: 6vh;
         line-height: 15px;
-        @include desktop {
-            display: none;
-        }
     }
 
     .right {
         width: 50px;
         padding: 0 3vw 0 0;
+        @include desktop {
+            display: none;
+        }
     }
 
     .toggle span svg{
